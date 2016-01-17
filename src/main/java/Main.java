@@ -3,6 +3,7 @@
  */
 public class Main {
     private int nullzero = 0;
+    private int someInt = 0;
     public static void main(String[] args) {
         System.out.println("Git branch testing");
 
