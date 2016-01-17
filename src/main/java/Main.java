@@ -6,5 +6,7 @@ public class Main {
         System.out.println("Git branch testing");
 
         System.out.println("new changing");
+
+        System.out.println("rebase");
     }
 }
