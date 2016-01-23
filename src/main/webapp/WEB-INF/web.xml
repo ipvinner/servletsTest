@@ -22,5 +22,30 @@
         <servlet-name>BeerSelect</servlet-name>
         <url-pattern>/SelectBeer.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>BeerParamTests</servlet-name>        
+        <servlet-class>ua.od.iptel.java.web.BeerParamTests</servlet-class>
+
+        <!--<init-param>-->
+            <!--<param-name>adminEmail</param-name>-->
+            <!--<param-value>vaniavinogradov@rambler.ru</param-value>-->
+        <!--</init-param>-->
+
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>mail@mail.ru</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>BeerParamTests</servlet-name>
+        <url-pattern>/Tester.do</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>adminEmail</param-name>
+        <param-value>vaniavinogradov@rambler.ru</param-value>
+    </context-param>
 
 </web-app>
