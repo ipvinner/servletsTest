@@ -3,6 +3,10 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
+    <listener>
+        <listener-class>ua.od.iptel.java.web.MyServletContextListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>Chapter1 servlet</servlet-name>
         <servlet-class>ua.od.iptel.java.servlets.Ch1Servlet</servlet-class>
@@ -27,15 +31,6 @@
         <servlet-name>BeerParamTests</servlet-name>        
         <servlet-class>ua.od.iptel.java.web.BeerParamTests</servlet-class>
 
-        <!--<init-param>-->
-            <!--<param-name>adminEmail</param-name>-->
-            <!--<param-value>vaniavinogradov@rambler.ru</param-value>-->
-        <!--</init-param>-->
-
-        <init-param>
-            <param-name>mainEmail</param-name>
-            <param-value>mail@mail.ru</param-value>
-        </init-param>
     </servlet>
     
     <servlet-mapping>
@@ -43,9 +38,21 @@
         <url-pattern>/Tester.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ListenerTest</servlet-name>
+        <servlet-class>ua.od.iptel.java.web.ListenerTester</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListenerTest</servlet-name>
+        <url-pattern>/listenterTest</url-pattern>
+    </servlet-mapping>
+
     <context-param>
-        <param-name>adminEmail</param-name>
-        <param-value>vaniavinogradov@rambler.ru</param-value>
+        <param-name>bread</param-name>
+        <param-value>Borodinsky</param-value>
     </context-param>
+    
+
 
 </web-app>
